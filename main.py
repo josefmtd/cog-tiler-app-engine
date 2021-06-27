@@ -10,4 +10,4 @@ app = FastAPI(
 cog = TilerFactory()
 
 # Register the COG endpoints to the application
-app.include_router(cog.router, tags=["Cloud Optimized GeoTIFF"])
+app.include_router(cog.router, prefix='/cog', tags=["Cloud Optimized GeoTIFF"])
