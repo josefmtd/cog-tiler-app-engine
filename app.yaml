@@ -1,2 +1,7 @@
 runtime: python39
 entrypoint: gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker
+
+instance_class: F4
+
+automatic_scaling:
+  max_instances: 2
